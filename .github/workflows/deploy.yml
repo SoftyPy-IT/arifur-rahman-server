@@ -63,7 +63,7 @@ jobs:
 
             if command -v pm2 &> /dev/null; then
               echo "♻️ Restarting application using PM2..."
-              pm2 restart saif-server || pm2 start npm --name "saif-server" -- run start
+              pm2 restart  api-saifalikhan || pm2 start npm --name " api-saifalikhan" -- run start
             else
               echo "❌ PM2 not found. Please install it using 'npm install -g pm2'."
               exit 1
