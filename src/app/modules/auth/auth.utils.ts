@@ -10,7 +10,6 @@ export const createToken = (
   return jwt.sign(jwtPayload, secret, options);
 };
 
-// /* eslint-disable @typescript-eslint/no-explicit-any */
 // import jwt from 'jsonwebtoken';
 // export const createToken = (
 //   jwtPayload: { email: any; role: any },
