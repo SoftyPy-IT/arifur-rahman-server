@@ -1,4 +1,4 @@
-name: Node.js Deployment with NGINX and SSL
+name: Node.js Deployment with NGINX and PM2
 
 on:
   push:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout code
+      # 1️⃣ Checkout the code
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -32,7 +32,7 @@ jobs:
             ls -la /var/www/html
 
       # 4️⃣ Deploy to VPS
-      - name: Deploy to VPS using SSH
+      - name: Deploy to VPS
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
