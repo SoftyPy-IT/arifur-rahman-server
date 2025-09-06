@@ -1,7 +1,8 @@
 export type TBanner = {
   name: string;
   designation: string;
-  videoUrl: string;
+  partyname: string;
+  image: string;
   updatedAt: string;
 };
 export type TConcernIssues = {

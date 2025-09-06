@@ -4,15 +4,25 @@ import { sendImageToCloudinary } from '../../utils/sendImageToCloudinary';
 import { TPhoto } from './photo.interface';
 import { Photo } from './photo.model';
 
-const createPhotoIntoDB = async (payload: TPhoto, file: any) => {
-  const name = `${payload?.folder}-${Date.now()}`;
-  const path = file?.path;
+const createPhotoIntoDB = async (payload: TPhoto, files: Express.Multer.File[]) => {
+  const results = [];
 
-  const { secure_url } = await sendImageToCloudinary(name, path);
-  payload.imageUrl = secure_url;
-  const result = await Photo.create(payload);
-  return result;
+  for (const file of files) {
+    const name = `${payload?.folder}-${Date.now()}`;
+    const path = file.path;
+
+    const { secure_url } = await sendImageToCloudinary(name, path);
+    const photoPayload = {
+      folder: payload.folder,
+      imageUrl: secure_url,
+    };
+    const result = await Photo.create(photoPayload);
+    results.push(result);
+  }
+
+  return results;
 };
+
 
 const getAllPhotoFromDB = async (query: Record<string, unknown>) => {
   const { folder } = query;
