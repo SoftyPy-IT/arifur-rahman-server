@@ -5,6 +5,7 @@ export type TBanner = {
   image: string;
   updatedAt: string;
 };
+// interface
 export type TConcernIssues = {
   issue1: string;
   issue2: string;
