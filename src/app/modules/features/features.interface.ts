@@ -23,7 +23,7 @@ export type TOurConcernIssue = {
 export type TWhoWeAre = {
   title: string;
   description: string;
-  videoUrl: string;
+  videourl: string;
 };
 export type TElectionCampaign = {
   title: string;

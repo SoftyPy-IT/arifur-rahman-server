@@ -55,7 +55,7 @@ const WhoWeAreSchema = new Schema<TWhoWeAre>(
   {
     title: { type: String, required: true },
     description: { type: String, required: true },
-    videoUrl: { type: String, required: true },
+    videourl: { type: String, required: true },
   },
   {
     timestamps: true,
