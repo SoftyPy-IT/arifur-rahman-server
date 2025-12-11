@@ -1,8 +1,8 @@
 export type TBanner = {
   name: string;
   designation: string;
-  partyname: string;
-  image: string;
+  // partyname: string;
+  imageUrl: string;
   updatedAt: string;
 };
 // interface

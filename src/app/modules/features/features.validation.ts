@@ -12,7 +12,7 @@ const BannerValidationSchema = z
         invalid_type_error: 'Banner description must be a string',
       })
       .optional(),
-    image: z
+    imageUrl: z
       .string({
         invalid_type_error: 'bgImageUrl must be a valid string',
       })

@@ -16,8 +16,8 @@ const BannerSchema = new Schema<TBanner>(
   {
     name: { type: String, required: true },
     designation: { type: String, required: true },
-    partyname: { type: String, required: true },
-    image: { type: String, required: true },
+    // partyname: { type: String, required: true },
+    imageUrl: { type: String, required: true },
   },
   {
     timestamps: true,
