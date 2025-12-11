@@ -38,7 +38,7 @@ jobs:
           script: |
             echo "🚀 Starting deployment to VPS..."
 
-            cd /var/www/html/saifalikhan/api || exit
+            cd /var/www/html/arif/server || exit
 
             echo "📦 Fetching latest code from GitHub..."
             git fetch --all
@@ -52,7 +52,7 @@ jobs:
 
             if command -v pm2 &> /dev/null; then
               echo "♻️ Restarting application using PM2..."
-              pm2 restart api-saifalikhan || pm2 start npm --name "api-saifalikhan" -- run start
+              pm2 restart arif-server || pm2 start npm --name "arif-server" -- run start
             else
               echo "❌ PM2 not found. Please install it using 'npm install -g pm2'."
               exit 1
