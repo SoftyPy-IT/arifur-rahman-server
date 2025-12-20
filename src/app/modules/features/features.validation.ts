@@ -4,8 +4,7 @@ const BannerValidationSchema = z
   .object({
     name: z
       .string({
-        invalid_type_error: 'Banner name must be a string', 
-        // banner
+        invalid_type_error: 'Banner name must be a string',
       })
       .optional(),
     designation: z
