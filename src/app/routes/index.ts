@@ -11,6 +11,7 @@ import { userRoutes } from '../modules/users/users.route';
 import { authRoutes } from '../modules/auth/auth.route';
 import { photosRoutes } from '../modules/photos/photo.route';
 import { videoRoutes } from '../modules/videos/video.route';
+import { bannerRoutes } from '../modules/banner/banner.route';
 
 const router = Router();
 
@@ -18,6 +19,10 @@ const moduleRoutes = [
   {
     path: '/events',
     route: eventRoutes,
+  },
+  {
+    path: '/banners',
+    route: bannerRoutes,
   },
   {
     path: '/articles',
