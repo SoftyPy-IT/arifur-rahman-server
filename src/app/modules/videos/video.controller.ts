@@ -4,7 +4,6 @@ import { VideoServices } from './video.service';
 import catchAsync from '../../utils/catchAsync';
 
 const createVideo = catchAsync(async (req, res) => {
-  console.log('📥 Received video data:', req.body); // Add this line
   
   const result = await VideoServices.createVideoIntoDB(req.body);
   
