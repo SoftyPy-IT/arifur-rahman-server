@@ -20,9 +20,9 @@ app.use(
         config.CORS_ORIGIN_CLIENT,
         "http://localhost:3001",
         "http://localhost:3000",
-        'https://admin.majumdararif.info/',
-        'https://majumdararif.info/',
-        'https://www.majumdararif.info/'
+        'https://admin.majumdararif.info',
+        'https://majumdararif.info',
+        'https://www.majumdararif.info'
      
       ];
 
