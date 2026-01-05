@@ -2,7 +2,7 @@
 import { model, Schema } from 'mongoose';
 
 export type TVideo = {
-  folder: string;
+  date: string;
   videoUrl: string;
   title?: string;
   videoType: 'youtube' | 'facebook';
@@ -13,7 +13,7 @@ export type TVideo = {
 
 const videoSchema = new Schema<TVideo>(
   {
-    folder: {
+    date: {
       type: String,
       required: true,
     },
